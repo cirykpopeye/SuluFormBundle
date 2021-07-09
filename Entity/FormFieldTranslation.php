@@ -44,6 +44,11 @@ class FormFieldTranslation
     /**
      * @var null|string
      */
+    private $helpText;
+
+    /**
+     * @var null|string
+     */
     private $defaultValue;
 
     /**
@@ -147,6 +152,16 @@ class FormFieldTranslation
         $this->shortTitle = $shortTitle;
 
         return $this;
+    }
+
+    public function getHelpText(): ?string
+    {
+        return $this->helpText;
+    }
+
+    public function setHelpText(?string $helpText): void
+    {
+        $this->helpText = $helpText;
     }
 
     /**

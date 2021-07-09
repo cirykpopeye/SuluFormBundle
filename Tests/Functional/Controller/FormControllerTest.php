@@ -251,6 +251,7 @@ class FormControllerTest extends SuluTestCase
             $this->assertEquals('Title', $response['fields'][$key]['title']);
             $this->assertEquals('Short Title', $response['fields'][$key]['shortTitle']);
             $this->assertEquals('Placeholder', $response['fields'][$key]['placeholder']);
+            $this->assertEquals('Help text', $response['fields'][$key]['helpText']);
             $this->assertEquals('Default Value', $response['fields'][$key]['defaultValue']);
             $this->assertNotNull($response['fields'][$key]['options']);
             $this->assertCountFields(11, $response['fields'][$key]);
@@ -334,6 +335,7 @@ class FormControllerTest extends SuluTestCase
         $formFieldTranslation->setShortTitle('Short Title');
         $formFieldTranslation->setTitle('Title');
         $formFieldTranslation->setPlaceholder('Placeholder');
+        $formFieldTranslation->setHelpText('Help text');
         $formFieldTranslation->setDefaultValue('Default Value');
         $formFieldTranslation->setLocale('en');
         $formFieldTranslation->setOptions([]);
@@ -356,6 +358,7 @@ class FormControllerTest extends SuluTestCase
         $formFieldTranslation2->setShortTitle('Short Title');
         $formFieldTranslation2->setTitle('Title');
         $formFieldTranslation2->setPlaceholder('Placeholder');
+        $formFieldTranslation2->setHelpText('Help text');
         $formFieldTranslation2->setDefaultValue('Default Value');
         $formFieldTranslation2->setLocale('en');
         $formFieldTranslation2->setOptions([]);
@@ -425,6 +428,7 @@ class FormControllerTest extends SuluTestCase
                     'title' => 'Title',
                     'shortTitle' => 'Short Title',
                     'placeholder' => 'Placeholder',
+                    'helpText' => 'Help text',
                     'defaultValue' => 'Default Value',
                     'width' => 'full',
                     'required' => true,
@@ -434,6 +438,7 @@ class FormControllerTest extends SuluTestCase
                     'title' => 'Title',
                     'shortTitle' => 'Short Title',
                     'placeholder' => 'Placeholder',
+                    'helpText' => 'Help text',
                     'defaultValue' => 'Default Value',
                     'width' => 'full',
                     'required' => true,

@@ -4,6 +4,11 @@
             xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/properties-1.0.xsd">
     <xi:include href="default_field.xml"  xpointer="xmlns(sulu=http://schemas.sulu.io/template/template)
                       xpointer(//sulu:property)"/>
+    <property name="helpText" type="text_line">
+        <meta>
+            <title>sulu_form.help</title>
+        </meta>
+    </property>
     <property name="placeholder" type="text_line" colspan="6">
         <meta>
             <title>sulu_form.example</title>

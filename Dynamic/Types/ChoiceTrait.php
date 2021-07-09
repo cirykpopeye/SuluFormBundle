@@ -43,10 +43,6 @@ trait ChoiceTrait
             $options['placeholder'] = $options['attr']['placeholder'];
             unset($options['attr']['placeholder']);
         }
-        if (isset($options['attr']['helpText'])) {
-            $options['helpText'] = $options['attr']['helpText'];
-            unset($options['attr']['helpText']);
-        }
 
         // Choices.
         $choices = $this->getChoices($translation);

@@ -42,8 +42,13 @@ class DateType implements FormFieldTypeInterface
     {
         $type = TypeDateType::class;
         $translation = $field->getTranslation($locale);
-        if ($translation && $translation->getOption('birthday')) {
-            $type = BirthdayType::class;
+        if ($translation) {
+            if ($translation->getOption('birthday')) {
+                $type = BirthdayType::class;
+            }
+            if ($translation->getPlaceholder()) {
+                $options['placeholder'] = $translation->getPlaceholder();
+            }
         }
         $options['format'] = \IntlDateFormatter::LONG;
         $options['input'] = 'string';
